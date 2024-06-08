@@ -17,15 +17,16 @@ class MainUI:
         root.rowconfigure(0, weight=1)
 
         title, title_entry = self.createTitleField()
+        mainframe_relief, mainframe_relief_entry = self.createMainframeReliefSelector()
 
-        meters = StringVar()
-        ttk.Label(self.mainframe, textvariable=meters).grid(column=2, row=2, sticky=(W, E))
+        # meters = StringVar()
+        # ttk.Label(self.mainframe, textvariable=meters).grid(column=2, row=2, sticky=(W, E))
 
         ttk.Button(self.mainframe, text="Calculate", command=lambda x: print("CALCULATE")).grid(column=3, row=3, sticky=W)
 
-        ttk.Label(self.mainframe, text="feet").grid(column=4, row=1, sticky=W)
-        ttk.Label(self.mainframe, text="is equivalent to").grid(column=1, row=2, sticky=E)
-        ttk.Label(self.mainframe, text="meters").grid(column=3, row=2, sticky=W)
+        # ttk.Label(self.mainframe, text="feet").grid(column=4, row=1, sticky=W)
+        # ttk.Label(self.mainframe, text="is equivalent to").grid(column=1, row=2, sticky=E)
+        # ttk.Label(self.mainframe, text="meters").grid(column=3, row=2, sticky=W)
 
 
         for child in self.mainframe.winfo_children(): 
@@ -41,11 +42,11 @@ class MainUI:
         return title, title_entry
     
     def createMainframeReliefSelector(self):
-        ttk.Label(self.mainframe, text="Mainframe Relief").grid(column=1, row=1, sticky=(W, E))
-        values = ['flat', 'raised', 'sunken', 'solid', 'ridge', 'groove']
-        title = StringVar()
-        title_entry = ttk.Combobox(self.mainframe, width=20, textvariable=title)
-        title_entry.grid(column=2, row=1, sticky=(W, E))
-        return title, title_entry
+        ttk.Label(self.mainframe, text="Mainframe Relief").grid(column=1, row=2, sticky=(W, E))
+        relief_values = ['flat', 'raised', 'sunken', 'solid', 'ridge', 'groove']
+        mainframe_relief = StringVar()
+        mainframe_relief_entry = ttk.Combobox(self.mainframe, values=relief_values, width=20, textvariable=mainframe_relief)
+        mainframe_relief_entry.grid(column=2, row=2, sticky=(W, E))
+        return mainframe_relief, mainframe_relief_entry
         
         
