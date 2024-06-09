@@ -11,9 +11,11 @@ Application that recursively makes a customizable UI for an application that rec
 2. Make the generated code an executable
 
 # Current Plan
-[] template code for application with markers that can be found and replaced
-[] application has selections to customize colour, padding, and other settings
-[] button to generate a new folder with the exact same codebase but with the new settings
+[ ] template code for application with markers that can be found and replaced
+
+[ ] application has selections to customize colour, padding, and other settings
+
+[ ] button to generate a new folder with the exact same codebase but with the new settings
 
 
 
