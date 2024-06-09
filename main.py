@@ -10,6 +10,6 @@ def calculate(*args):
         pass
 
 root = Tk()
-MainUI(root)
+main_UI = MainUI(root)
 
 root.mainloop()
