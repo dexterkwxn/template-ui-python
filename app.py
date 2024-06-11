@@ -76,5 +76,7 @@ class MainUI:
             
 
     def validateFields(self):
+        if not self.title.get() or not self.mainframe_relief.get():
+            return False
         return True
         
