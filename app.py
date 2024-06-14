@@ -50,6 +50,14 @@ class MainUI:
         self.mainframe_relief_entry = ttk.Combobox(self.mainframe, values=self.relief_values, width=20, textvariable=self.mainframe_relief)
         self.mainframe_relief_entry.grid(column=2, row=2, sticky=(W, E))
         return
+    
+    def createBackgroundColourCustomizer(self):
+        ttk.Label(self.mainframe, text="Background Colour").grid(column=1, row = 3, sticky=(W, E))
+        return
+
+    def createPaddingField(self):
+        ttk.Label(self.mainframe, text="Background Colour").grid(column=1, row = 4, sticky=(W, E))
+        return
         
     def createApplication(self, *args):
         if not self.validateFields():
